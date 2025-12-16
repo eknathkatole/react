@@ -1,0 +1,19 @@
+import React, { useState } from 'react'
+
+const App = () => {
+
+  const [num, setNum] = useState(3)
+  const [num1, setNum1] = useState(1)
+   function changeNum(){
+    setNum(num + 1)
+    setNum1(num1 + 1)
+   }
+  return (
+    <div>
+     <h1>Value{num} <br /> Value{num1}</h1>
+     <h1>Change num2 value</h1>
+     <button onClick={changeNum}>Click</button>
+    </div>
+  )
+}
+export default App
