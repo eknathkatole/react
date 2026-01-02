@@ -1,0 +1,17 @@
+import React, { useState } from 'react'
+
+const App = () => { 
+  
+  const [num, setNum] = useState({user:'John', age:25});
+  
+  const btnClicked = () => {
+    setNum(prev=> ({...prev,user:'Jane',age:30}));
+  }
+return(
+  <div>
+    <h1>{num.user} {num.age}</h1>
+    <button onClick={btnClicked}>Change Number</button>
+  </div>
+)
+}
+export default App
